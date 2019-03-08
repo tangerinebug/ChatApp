@@ -78,6 +78,6 @@ app.get('*', (req, res) => {
 })
 
 //SERVER CONNECTION
-var server = http.listen(3000, () => {
+var server = http.listen(process.env.PORT, () => {
   console.log('server is running on port', server.address().port);
 });
