@@ -6,7 +6,7 @@ var io = require('socket.io')(http);
 var mongoose = require('mongoose');
 
 //dirname+frontend test
-app.use(express.static(__dirname+'frontend/build'));
+app.use(express.static(__dirname+'frontend'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 
@@ -74,7 +74,7 @@ io.on('connection', (socket) =>{
 
 //test
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/frontend/build/index.html')
+  res.sendFile(__dirname + '/frontend/index.html')
 })
 
 //SERVER CONNECTION
