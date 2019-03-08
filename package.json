@@ -4,7 +4,9 @@
   "description": "demo chat app",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node servevr.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
